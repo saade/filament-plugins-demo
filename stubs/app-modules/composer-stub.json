@@ -1,0 +1,26 @@
+{
+    "name": "StubComposerName",
+    "description": "StubClassNamePrefix module",
+    "type": "library",
+    "version": "1.0",
+    "license": "proprietary",
+    "require": {
+        "filament/filament": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "StubModuleNamespace\\StubClassNamePrefix\\": "src/",
+            "StubModuleNamespace\\StubClassNamePrefix\\Tests\\": "tests/",
+            "StubModuleNamespace\\StubClassNamePrefix\\Database\\Factories\\": "database/factories/",
+            "StubModuleNamespace\\StubClassNamePrefix\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "minimum-stability": "beta",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "StubModuleNamespace\\StubClassNamePrefix\\Providers\\StubClassNamePrefixServiceProvider"
+            ]
+        }
+    }
+}

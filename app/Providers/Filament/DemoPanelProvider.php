@@ -30,7 +30,7 @@ class DemoPanelProvider extends PanelProvider
             ->login()
             ->topbar(false)
             ->colors(['primary' => Color::Amber])
-            ->viteTheme('resources/css/filament/demo/theme.css')
+            ->viteTheme('resources/css/filament/theme.css')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
