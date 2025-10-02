@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbcc90ca18837a12aebf9c20f6114777",
+    "content-hash": "3eaf5e791b7835335ceeb5820662ffdb",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -4967,7 +4967,7 @@
             "dist": {
                 "type": "path",
                 "url": "plugins/adjacency-list",
-                "reference": "47430fe3a6d43cb000d8f8cc7c7c995b6cf79d45"
+                "reference": "955ac2d49f504b67b14d7292be34014b4f7f884f"
             },
             "require": {
                 "filament/filament": "^4.0",
@@ -5030,6 +5030,43 @@
                 "proprietary"
             ],
             "description": "FullCalendar module",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "plugins/laravel-log",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "plugins/laravel-log",
+                "reference": "74fd98fedb91df09dd42bf53d3ce8b446ba91709"
+            },
+            "require": {
+                "filament/filament": "^4.0",
+                "saade/filament-laravel-log": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Plugins\\LaravelLog\\Providers\\LaravelLogServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Plugins\\LaravelLog\\": "src/",
+                    "Plugins\\LaravelLog\\Tests\\": "tests/",
+                    "Plugins\\LaravelLog\\Database\\Factories\\": "database/factories/",
+                    "Plugins\\LaravelLog\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "LaravelLog module",
             "transport-options": {
                 "symlink": true,
                 "relative": true
@@ -6143,6 +6180,94 @@
                 "laravel",
                 "saade"
             ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "saade/filament-laravel-log",
+            "version": "4.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "plugins/laravel-log/filament-laravel-log",
+                "reference": "beb040a51f0aae46a5969cbc07d9ddd1995f4bac"
+            },
+            "require": {
+                "filament/filament": "^4.0",
+                "illuminate/contracts": "^11.0|^12.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.15.0"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.1.0",
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.0|^8.0",
+                "orchestra/testbench": "^9.0|^10.0",
+                "pestphp/pest": "^2.0",
+                "pestphp/pest-plugin-arch": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^2.0.1",
+                "phpstan/phpstan-phpunit": "^2.0.4",
+                "spatie/laravel-ray": "^1.26"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Saade\\FilamentLaravelLog\\FilamentLaravelLogServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Saade\\FilamentLaravelLog\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Saade\\FilamentLaravelLog\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "@php ./vendor/bin/testbench package:discover --ansi"
+                ],
+                "analyse": [
+                    "vendor/bin/phpstan analyse --memory-limit=512M"
+                ],
+                "format": [
+                    "vendor/bin/pint"
+                ],
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest --coverage"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saade",
+                    "email": "saade@outlook.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Access laravel.log file through Filament admin panel",
+            "homepage": "https://github.com/saade/filament-laravel-log",
+            "keywords": [
+                "filament-laravel-log",
+                "laravel",
+                "saade"
+            ],
+            "support": {
+                "issues": "https://github.com/saade/filament-laravel-log/issues",
+                "source": "https://github.com/saade/filament-laravel-log"
+            },
             "transport-options": {
                 "symlink": true,
                 "relative": true

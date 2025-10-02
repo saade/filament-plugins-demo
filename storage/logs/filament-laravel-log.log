@@ -1,0 +1,47 @@
+[2025-10-02 16:58:42] local.CRITICAL: IncorrectNumberSequenceException: Incorrect number sequence. Unable to reset ominous electromagnet.
+Did you mean 4 8 15 16 23 42? {"request_id":"REQ-10842","env":"local","users":246,"events":1755}
+Stacktrace:
+#0 /usr/local/lost/reset-electromagnet.php(108): Dharma\Initiative\Electromagnet->reset()
+#1 {main}
+
+[2025-10-02 17:03:11] staging.WARNING: TypeError: function is not a function. Advice: Stop pasting Word docs into production code.
+{"request_id":"REQ-18400","env":"staging","users":240,"events":1840}
+Stacktrace:
+#0 /var/www/creedthoughts/index.php(42): Creed\Thoughts->share()
+#1 /var/www/creedthoughts/ftp/creed.docx(666): Creed\Thoughts->upload()
+#2 {main}
+
+[2025-10-02 17:07:56] production.ERROR: UnexpectedOptionException: Do or do not. There is no option "--force".
+{"request_id":"REQ-17690","env":"production","users":736,"events":1769}
+Stacktrace:
+#0 artisan deploy(23): Empire\Console\DeployController->handle()
+#1 artisan(37): Illuminate\Console\Command->run()
+#2 {main}
+
+[2025-10-02 17:15:22] local.ALERT: AccessDeniedError: I'm sorry, Dave. I'm afraid I can't let you do that.
+{"request_id":"REQ-16830","env":"local","users":432,"events":1683}
+Stacktrace:
+#0 /app/Commands/ShutdownCommand.php(2001): HAL9000->authorize()
+#1 /app/Console/Kernel.php(42): App\Domain\Commands\ShutdownCommand->handle()
+#2 {main}
+
+[2025-10-02 17:22:44] production.SECURITY: UnauthorizedException: User 'samsepi01' does not have access to server CS30.
+{"request_id":"REQ-18260","env":"production","users":728,"events":1826}
+Stacktrace:
+#0 /app/Jobs/ProcessPendingOrdersJob.php(1337): Ecorp\Auth\Gatekeeper->check()
+#1 /vendor/evil-corp/overwatch.php(101): App\Jobs\ProcessPendingOrdersJob->handle()
+#2 {main}
+
+[2025-10-02 17:36:09] staging.ERROR: MiddleOutException: The middle_out compression driver was not found. Install: `composer require hooli/middle-out`
+{"request_id":"REQ-19050","env":"staging","users":861,"events":1905}
+Stacktrace:
+#0 /app/Domain/Beta/ChatController.php(451): Hooli\Compression\MiddleOut->init()
+#1 /routes/web.php(42): App\Domain\Beta\ChatController->compress()
+#2 {main}
+
+[2025-10-02 17:49:51] production.CRITICAL: UnexpectedIcebergException: Looks like we hit something, it’s probably fine tho.
+{"request_id":"REQ-19150","env":"production","users":416,"events":1915}
+Stacktrace:
+#0 /app/Http/Controllers/LookoutController.php(1912): Titanic\Lookout->watch()
+#1 /app/Steam/Engine.php(1915): Titanic\Captain->ignoreWarnings()
+#2 {main}

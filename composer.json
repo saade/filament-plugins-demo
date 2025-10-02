@@ -29,6 +29,13 @@
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type": "path",
+            "url": "plugins/laravel-log/filament-laravel-log",
+            "options": {
+                "symlink": true
+            }
         }
     ],
     "require": {
@@ -38,7 +45,8 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "plugins/adjacency-list": "*",
-        "plugins/fullcalendar": "*"
+        "plugins/fullcalendar": "*",
+        "plugins/laravel-log": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

@@ -4,3 +4,6 @@
 [submodule "plugins/adjacency-list/filament-adjacency-list"]
 	path = plugins/adjacency-list/filament-adjacency-list
 	url = git@github.com:saade/filament-adjacency-list.git
+[submodule "plugins/laravel-log/filament-laravel-log"]
+	path = plugins/laravel-log/filament-laravel-log
+	url = git@github.com:saade/filament-laravel-log.git

@@ -16,7 +16,7 @@
             "Plugins\\AdjacencyList\\Database\\Seeders\\": "database/seeders/"
         }
     },
-    "minimum-stability": "beta",
+    "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [

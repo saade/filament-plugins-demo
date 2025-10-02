@@ -1,2 +1,3 @@
 *
 !.gitignore
+!filament-laravel-log.log

@@ -1,0 +1,27 @@
+{
+    "name": "plugins/laravel-log",
+    "description": "LaravelLog module",
+    "type": "library",
+    "version": "1.0",
+    "license": "proprietary",
+    "require": {
+        "filament/filament": "^4.0",
+        "saade/filament-laravel-log": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Plugins\\LaravelLog\\": "src/",
+            "Plugins\\LaravelLog\\Tests\\": "tests/",
+            "Plugins\\LaravelLog\\Database\\Factories\\": "database/factories/",
+            "Plugins\\LaravelLog\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Plugins\\LaravelLog\\Providers\\LaravelLogServiceProvider"
+            ]
+        }
+    }
+}
