@@ -1,0 +1,27 @@
+{
+    "name": "plugins/adjacency-list",
+    "description": "AdjacencyList module",
+    "type": "library",
+    "version": "1.0",
+    "license": "proprietary",
+    "require": {
+        "filament/filament": "^4.0",
+        "saade/filament-adjacency-list": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Plugins\\AdjacencyList\\": "src/",
+            "Plugins\\AdjacencyList\\Tests\\": "tests/",
+            "Plugins\\AdjacencyList\\Database\\Factories\\": "database/factories/",
+            "Plugins\\AdjacencyList\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "minimum-stability": "beta",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Plugins\\AdjacencyList\\Providers\\AdjacencyListServiceProvider"
+            ]
+        }
+    }
+}

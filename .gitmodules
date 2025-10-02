@@ -1,3 +1,6 @@
 [submodule "plugins/fullcalendar/filament-fullcalendar"]
 	path = plugins/fullcalendar/filament-fullcalendar
 	url = git@github.com:saade/filament-fullcalendar.git
+[submodule "plugins/adjacency-list/filament-adjacency-list"]
+	path = plugins/adjacency-list/filament-adjacency-list
+	url = git@github.com:saade/filament-adjacency-list.git

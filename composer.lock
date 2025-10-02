@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abc915c47724f93e05b7a758a08c274f",
+    "content-hash": "cbcc90ca18837a12aebf9c20f6114777",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -4962,12 +4962,49 @@
             "time": "2025-08-21T11:53:16+00:00"
         },
         {
+            "name": "plugins/adjacency-list",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "plugins/adjacency-list",
+                "reference": "47430fe3a6d43cb000d8f8cc7c7c995b6cf79d45"
+            },
+            "require": {
+                "filament/filament": "^4.0",
+                "saade/filament-adjacency-list": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Plugins\\AdjacencyList\\Providers\\AdjacencyListServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Plugins\\AdjacencyList\\": "src/",
+                    "Plugins\\AdjacencyList\\Tests\\": "tests/",
+                    "Plugins\\AdjacencyList\\Database\\Factories\\": "database/factories/",
+                    "Plugins\\AdjacencyList\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "AdjacencyList module",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "plugins/fullcalendar",
             "version": "1.0",
             "dist": {
                 "type": "path",
                 "url": "plugins/fullcalendar",
-                "reference": "622936686045c8c40a1edc7509e6cb89885d3aa0"
+                "reference": "809696669901888944df9d35fe626b635ff08a9f"
             },
             "require": {
                 "filament/filament": "^4.0",
@@ -4977,22 +5014,22 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Plugins\\Fullcalendar\\Providers\\FullcalendarServiceProvider"
+                        "Plugins\\FullCalendar\\Providers\\FullCalendarServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Plugins\\Fullcalendar\\": "src/",
-                    "Plugins\\Fullcalendar\\Tests\\": "tests/",
-                    "Plugins\\Fullcalendar\\Database\\Factories\\": "database/factories/",
-                    "Plugins\\Fullcalendar\\Database\\Seeders\\": "database/seeders/"
+                    "Plugins\\FullCalendar\\": "src/",
+                    "Plugins\\FullCalendar\\Tests\\": "tests/",
+                    "Plugins\\FullCalendar\\Database\\Factories\\": "database/factories/",
+                    "Plugins\\FullCalendar\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
                 "proprietary"
             ],
-            "description": "Fullcalendar module",
+            "description": "FullCalendar module",
             "transport-options": {
                 "symlink": true,
                 "relative": true
@@ -5957,8 +5994,92 @@
             "time": "2025-02-25T09:09:36+00:00"
         },
         {
+            "name": "saade/filament-adjacency-list",
+            "version": "4.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "plugins/adjacency-list/filament-adjacency-list",
+                "reference": "ae801e6f7fb9c057360a71b55ad7d6ae3de0b83b"
+            },
+            "require": {
+                "filament/filament": "^4.0",
+                "illuminate/contracts": "^10.0|^11.0|^12.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.15.0",
+                "staudenmeir/laravel-adjacency-list": "^1.18"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.0|^8.0|^9.0",
+                "nunomaduro/larastan": "^2.0.1",
+                "orchestra/testbench": "^8.0|^9.0|^10.0",
+                "pestphp/pest": "^2.0",
+                "pestphp/pest-plugin-arch": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "spatie/laravel-ray": "^1.26"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Saade\\FilamentAdjacencyList\\FilamentAdjacencyListServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Saade\\FilamentAdjacencyList\\": "src/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "@php ./vendor/bin/testbench package:discover --ansi"
+                ],
+                "analyse": [
+                    "vendor/bin/phpstan analyse"
+                ],
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest --coverage"
+                ],
+                "format": [
+                    "vendor/bin/pint"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saade",
+                    "email": "saade@outlook.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Filament package to adjacency lists.",
+            "homepage": "https://github.com/saade/filament-adjacency-list",
+            "keywords": [
+                "filament-adjacency-list",
+                "laravel",
+                "saade"
+            ],
+            "support": {
+                "issues": "https://github.com/saade/filament-adjacency-list/issues",
+                "source": "https://github.com/saade/filament-adjacency-list"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "saade/filament-fullcalendar",
-            "version": "3.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "plugins/fullcalendar/filament-fullcalendar",
@@ -6462,6 +6583,178 @@
                 }
             ],
             "time": "2025-02-21T14:16:57+00:00"
+        },
+        {
+            "name": "staudenmeir/eloquent-has-many-deep-contracts",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staudenmeir/eloquent-has-many-deep-contracts.git",
+                "reference": "37ce351e4db919b3af606bc8ca0e62e2e4939cde"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staudenmeir/eloquent-has-many-deep-contracts/zipball/37ce351e4db919b3af606bc8ca0e62e2e4939cde",
+                "reference": "37ce351e4db919b3af606bc8ca0e62e2e4939cde",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^12.0",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Staudenmeir\\EloquentHasManyDeepContracts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Staudenmeir",
+                    "email": "mail@jonas-staudenmeir.de"
+                }
+            ],
+            "description": "Contracts for staudenmeir/eloquent-has-many-deep",
+            "support": {
+                "issues": "https://github.com/staudenmeir/eloquent-has-many-deep-contracts/issues",
+                "source": "https://github.com/staudenmeir/eloquent-has-many-deep-contracts/tree/v1.3"
+            },
+            "time": "2025-02-15T17:11:01+00:00"
+        },
+        {
+            "name": "staudenmeir/laravel-adjacency-list",
+            "version": "v1.25.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staudenmeir/laravel-adjacency-list.git",
+                "reference": "a54c5ff70d2d417251f33dfda5646e84d1c6d55e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staudenmeir/laravel-adjacency-list/zipball/a54c5ff70d2d417251f33dfda5646e84d1c6d55e",
+                "reference": "a54c5ff70d2d417251f33dfda5646e84d1c6d55e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^12.0",
+                "php": "^8.2",
+                "staudenmeir/eloquent-has-many-deep-contracts": "^1.3",
+                "staudenmeir/laravel-cte": "^1.12.1"
+            },
+            "require-dev": {
+                "barryvdh/laravel-ide-helper": "^3.0",
+                "larastan/larastan": "^3.0",
+                "laravel/framework": "^12.0",
+                "mockery/mockery": "^1.5.1",
+                "orchestra/testbench-core": "^10.0",
+                "phpunit/phpunit": "^11.0",
+                "singlestoredb/singlestoredb-laravel": "^2.0",
+                "staudenmeir/eloquent-has-many-deep": "^1.21"
+            },
+            "suggest": {
+                "barryvdh/laravel-ide-helper": "Provide type hints for attributes and relations."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Staudenmeir\\LaravelAdjacencyList\\IdeHelperServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Staudenmeir\\LaravelAdjacencyList\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Staudenmeir",
+                    "email": "mail@jonas-staudenmeir.de"
+                }
+            ],
+            "description": "Recursive Laravel Eloquent relationships with CTEs",
+            "support": {
+                "issues": "https://github.com/staudenmeir/laravel-adjacency-list/issues",
+                "source": "https://github.com/staudenmeir/laravel-adjacency-list/tree/v1.25.2"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/JonasStaudenmeir",
+                    "type": "custom"
+                }
+            ],
+            "time": "2025-07-27T18:15:05+00:00"
+        },
+        {
+            "name": "staudenmeir/laravel-cte",
+            "version": "v1.12.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staudenmeir/laravel-cte.git",
+                "reference": "b95dc4038e5a53a27dfd4c4905e3d296d4eb27d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staudenmeir/laravel-cte/zipball/b95dc4038e5a53a27dfd4c4905e3d296d4eb27d5",
+                "reference": "b95dc4038e5a53a27dfd4c4905e3d296d4eb27d5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^12.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "laravel/framework": "^12.0",
+                "orchestra/testbench-core": "^10.0",
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^11.0",
+                "singlestoredb/singlestoredb-laravel": "^2.0",
+                "yajra/laravel-oci8": "^12.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Staudenmeir\\LaravelCte\\DatabaseServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Staudenmeir\\LaravelCte\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Staudenmeir",
+                    "email": "mail@jonas-staudenmeir.de"
+                }
+            ],
+            "description": "Laravel queries with common table expressions",
+            "support": {
+                "issues": "https://github.com/staudenmeir/laravel-cte/issues",
+                "source": "https://github.com/staudenmeir/laravel-cte/tree/v1.12.3"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/JonasStaudenmeir",
+                    "type": "custom"
+                }
+            ],
+            "time": "2025-09-13T08:40:23+00:00"
         },
         {
             "name": "symfony/clock",
