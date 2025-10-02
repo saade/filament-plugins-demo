@@ -1,0 +1,27 @@
+{
+    "name": "plugins/fullcalendar",
+    "description": "FullCalendar module",
+    "type": "library",
+    "version": "1.0",
+    "license": "proprietary",
+    "require": {
+        "filament/filament": "^4.0",
+        "saade/filament-fullcalendar": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Plugins\\FullCalendar\\": "src/",
+            "Plugins\\FullCalendar\\Tests\\": "tests/",
+            "Plugins\\FullCalendar\\Database\\Factories\\": "database/factories/",
+            "Plugins\\FullCalendar\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Plugins\\FullCalendar\\Providers\\FullCalendarServiceProvider"
+            ]
+        }
+    }
+}

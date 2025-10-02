@@ -1,0 +1,3 @@
+[submodule "plugins/fullcalendar/filament-fullcalendar"]
+	path = plugins/fullcalendar/filament-fullcalendar
+	url = git@github.com:saade/filament-fullcalendar.git

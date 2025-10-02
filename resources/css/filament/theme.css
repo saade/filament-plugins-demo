@@ -3,6 +3,12 @@
 @source '../../../app/Filament/**/*';
 @source '../../../resources/views/**/*';
 
+@source '../../../plugins/*/src/Filament/**/*';
+@source '../../../plugins/*/resources/views/**/*';
+
+@import "../../../vendor/saade/filament-fullcalendar/resources/css/filament-fullcalendar.css";
+@source '../../../vendor/saade/filament-fullcalendar/resources/views/**/*';
+
 .fi-sidebar {
     @apply bg-white px-4 shadow-xs ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10;
 }
