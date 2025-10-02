@@ -7,3 +7,6 @@
 [submodule "plugins/laravel-log/filament-laravel-log"]
 	path = plugins/laravel-log/filament-laravel-log
 	url = git@github.com:saade/filament-laravel-log.git
+[submodule "plugins/autograph/filament-autograph"]
+	path = plugins/autograph/filament-autograph
+	url = git@github.com:saade/filament-autograph.git

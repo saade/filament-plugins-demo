@@ -1,0 +1,27 @@
+{
+    "name": "plugins/autograph",
+    "description": "Autograph module",
+    "type": "library",
+    "version": "1.0",
+    "license": "proprietary",
+    "require": {
+        "filament/filament": "^4.0",
+        "saade/filament-autograph": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Plugins\\Autograph\\": "src/",
+            "Plugins\\Autograph\\Tests\\": "tests/",
+            "Plugins\\Autograph\\Database\\Factories\\": "database/factories/",
+            "Plugins\\Autograph\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Plugins\\Autograph\\Providers\\AutographServiceProvider"
+            ]
+        }
+    }
+}

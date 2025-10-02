@@ -29,6 +29,7 @@ class LaravelLogPlugin implements Plugin
                     'telescope.log',          // Telescope
                     'debugbar.log',           // Debugbar
                 ])
+                ->slug('laravel-log/logs')
         );
     }
 
