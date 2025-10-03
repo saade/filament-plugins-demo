@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Filament\Pages\Auth\Login;
 use App\Filament\Pages\Dashboard;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
@@ -25,7 +26,7 @@ class FilamentDemoPanelProvider extends PanelProvider
             ->default()
             ->id('demo')
             ->path('demo')
-            ->login()
+            ->login(Login::class)
             ->topbar(false)
             ->globalSearch(false)
             ->collapsibleNavigationGroups(false)
