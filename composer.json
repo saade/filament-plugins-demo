@@ -18,6 +18,13 @@
         },
         {
             "type": "path",
+            "url": "filament/packages/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
             "url": "plugins/fullcalendar/filament-fullcalendar",
             "options": {
                 "symlink": true
@@ -47,7 +54,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "filament/filament": "^4.0",
+        "filament/filament": "*",
         "internachi/modular": "^2.3",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
